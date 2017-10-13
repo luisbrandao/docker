@@ -11,7 +11,7 @@ services:
       - .:/var/www/app
     network_mode: bridge
     ports:
-      - "9000:9000"
+      - "4567:4567"
 
   nginx:
     build: .docker/nginx

@@ -84,8 +84,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 WORKDIR /var/www/app
 
-# Open port 9000
-EXPOSE 9000
+# Open port 4567
+EXPOSE 4567
 
 # Execute command
 CMD ["php-fpm"]
