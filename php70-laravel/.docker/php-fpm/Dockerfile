@@ -82,6 +82,10 @@ RUN apk add --update --no-cache autoconf g++ imagemagick-dev libtool make pcre-d
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Configure php-fpm
+COPY www.conf /usr/local/etc/php-fpm.d/www.conf
+COPY zz-docker.conf /usr/local/etc/php-fpm.d/www.conf
+
 WORKDIR /var/www/app
 
 # Open port 4567
