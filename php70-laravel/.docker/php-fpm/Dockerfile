@@ -10,7 +10,7 @@ RUN apk --no-cache --update add \
     cyrus-sasl-dev \
     freetype-dev \
     git \
-    libgsasl-dev
+    libgsasl-dev \
     libjpeg-turbo-dev \
     libjpeg-turbo-dev \
     libmcrypt-dev \
