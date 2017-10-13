@@ -25,7 +25,7 @@ RUN apk --no-cache --update add \
     postgresql-dev \
     postgresql-dev \
     sqlite-dev \
-    wget
+    wget \
     zlib-dev \
     freetype-dev && \
     rm -rf /tmp/* && \
