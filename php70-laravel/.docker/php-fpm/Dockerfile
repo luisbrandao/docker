@@ -3,6 +3,7 @@ FROM php:7.0-fpm-alpine
 # Install dependencies
 RUN apk --no-cache --update add \
     autoconf \
+    bash \
     build-base \
     curl \
     curl-dev \
