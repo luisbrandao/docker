@@ -10,8 +10,6 @@ services:
     volumes:
       - .:/var/www/app
     network_mode: bridge
-    ports:
-      - "4567:4567"
 
   nginx:
     build: .docker/nginx
