@@ -7,23 +7,15 @@ RUN apk --no-cache --update add \
     build-base \
     curl \
     curl-dev \
-    curl-dev \
     cyrus-sasl-dev \
     freetype-dev \
     git \
     libgsasl-dev \
     libjpeg-turbo-dev \
-    libjpeg-turbo-dev \
-    libmcrypt-dev \
-    libmcrypt-dev \
     libmcrypt-dev \
     libmemcached-dev \
     libpng-dev \
-    libpng-dev \
     libxml2-dev \
-    libxml2-dev \
-    libxml2-dev \
-    postgresql-dev \
     postgresql-dev \
     sqlite-dev \
     wget \
