@@ -1,0 +1,49 @@
+version: '3'
+
+volumes:
+  postgres:
+  redis:
+
+services:
+  php-fpm:
+    build: .docker/php-fpm
+    volumes:
+      - .:/var/www/app
+    network_mode: bridge
+
+  nginx:
+    build: .docker/nginx
+    volumes:
+      - .:/var/www/app
+    network_mode: bridge
+    ports:
+      - "1234:80"
+    links:
+      - php-fpm
+
+  postgres:
+    env_file:
+      - .env
+    container_name: ${DB_HOST}
+    build: .docker/postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:5432"
+    environment:
+      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    network_mode: bridge
+
+  redis:
+    container_name: ${REDIS_HOST}
+    build:
+      context: .docker/redis
+      args:
+        - REDIS_PASSWORD=${REDIS_PASSWORD}
+    volumes:
+      - redis:/data
+    ports:
+      - "${REDIS_PORT}:6379"
+    network_mode: bridge
