@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  puma:
+    build: .docker/puma
+    volumes:
+      - .:/var/www/app
+    network_mode: bridge
