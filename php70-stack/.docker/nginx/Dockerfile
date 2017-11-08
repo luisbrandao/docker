@@ -1,5 +1,7 @@
 FROM nginx:1.13.5-alpine
 
+MAINTAINER Luis Alexandre Deschamps Brandão <techmago@ymail.com>
+
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY vhost.conf /etc/nginx/conf.d/default.conf
 

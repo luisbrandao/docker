@@ -1,5 +1,7 @@
 FROM redis:latest
 
+MAINTAINER Luis Alexandre Deschamps Brandão <techmago@ymail.com>
+
 RUN mkdir -p /usr/local/etc/redis
 COPY redis.conf /usr/local/etc/redis/redis.conf
 

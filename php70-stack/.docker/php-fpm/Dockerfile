@@ -1,5 +1,7 @@
 FROM php:7.0-fpm-alpine
 
+MAINTAINER Luis Alexandre Deschamps Brandão <techmago@ymail.com>
+
 # Install dependencies
 RUN apk --no-cache --update add \
     autoconf \
