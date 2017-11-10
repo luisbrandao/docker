@@ -10,7 +10,7 @@ ENV SYSTEM_PACKAGES="bash vim" \
     RAILS_VERSION="5.1.4"
 
 RUN \
-  apk --update --upgrade add $SYSTEM_PACKAGES $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
+  apk --update --upgrade add $SYSTEM_PACKAGES $DATABASE_PACKAGES $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
   gem install -N bundler
 
 RUN \
@@ -29,4 +29,8 @@ RUN \
 
 EXPOSE 3000
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+
+COPY start.sh /start.sh
+CMD ["bash","start.sh"]
+
+#ENTRYPOINT ["tail", "-f", "/dev/null"]

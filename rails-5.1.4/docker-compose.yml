@@ -6,3 +6,5 @@ services:
     volumes:
       - .:/var/www/app
     network_mode: bridge
+    ports:
+      - "3000:3000"
