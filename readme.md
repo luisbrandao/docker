@@ -14,3 +14,8 @@ Para user essa configuração ou copie para o seu diretório de trabalho o docke
 Para executar comandos dentro do seu projeto use:
 
     docker-compose exec php-fpm composer install
+
+
+## luisOs
+
+Imagem basica do centOS projetada para ser usada como alternativa leve de vm com a intenção de facilitar o desenvolvimento de modulos ansible.
