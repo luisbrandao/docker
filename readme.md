@@ -1,6 +1,10 @@
 # Docker premade containers
 
 git clone --recurse-submodules -j2 git@github.com:luisbrandao/docker.git
+git submodule update
+git submodule foreach git checkout master
+git submodule foreach git pull origin master
+
 
 ## php70-stack
 Grupo de conteiners destinado ao desenvolvimento de aplicações com php 7.0. Incluido nesse bundle:
