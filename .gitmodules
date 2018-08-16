@@ -1,12 +1,16 @@
 [submodule "luisOS"]
 	path = luisOS
 	url = git@github.com:luisbrandao/luisOS.git
+	branch = master
 [submodule "luisOS-jenkins"]
 	path = luisOS-jenkins
 	url = git@github.com:luisbrandao/luisOS-jenkins.git
+	branch = master
 [submodule "luisOS-node"]
 	path = luisOS-node
 	url = git@github.com:luisbrandao/luisOS-node.git
+	branch = master
 [submodule "luisOS-zabbix"]
 	path = luisOS-zabbix
 	url = git@github.com:luisbrandao/luisOS-zabbix.git
+	branch = master
