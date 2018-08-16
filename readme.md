@@ -3,7 +3,7 @@
 git clone --recurse-submodules -j2 git@github.com:luisbrandao/docker.git
 git submodule update
 git submodule foreach git checkout master
-git submodule foreach git pull origin master
+git submodule foreach git push
 
 
 ## php70-stack
