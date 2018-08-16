@@ -1,4 +1,7 @@
 # Docker premade containers
+
+git clone --recurse-submodules -j2 git@github.com:luisbrandao/docker.git
+
 ## php70-stack
 Grupo de conteiners destinado ao desenvolvimento de aplicações com php 7.0. Incluido nesse bundle:
  - Nginx (nginx:1.13.5-alpine)
