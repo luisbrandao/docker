@@ -4,6 +4,7 @@ MAINTAINER Luis Alexandre Deschamps Brandão <techmago@ymail.com>
 
 # Install dependencies
 RUN apk --no-cache --update add \
+    icu-dev \
     autoconf \
     bash \
     build-base \
@@ -41,6 +42,7 @@ RUN docker-php-ext-configure json && \
     docker-php-ext-configure iconv && \
     docker-php-ext-configure xml && \
     docker-php-ext-configure phar && \
+    docker-php-ext-configure intl && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 
 # Build and install PHP extensions
@@ -65,7 +67,8 @@ RUN docker-php-ext-install \
     phar \
     pgsql \
     soap \
-    gd
+    gd \
+    intl
 
 # Install Imagick
 RUN apk add --update --no-cache autoconf g++ imagemagick-dev libtool make pcre-dev \
